@@ -2,8 +2,8 @@ import 'dart:io';
 
 class Palavra {
   final String texto;
-  late final int quantidadeVogais;
-  late final int quantidadeLetras;
+  int quantidadeVogais = 0;
+  int quantidadeLetras = 0;
 
   Palavra(this.texto) {
     _contarCaracteres();
