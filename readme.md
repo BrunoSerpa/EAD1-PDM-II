@@ -30,6 +30,12 @@ A **tipagem forte impede conversões automáticas** entre tipos **incompatíveis
 
 **Lista de Exercícios – Desafios Práticos em Dart**
 
-1. Crie um programa que peça uma temperatura em graus Celsius e classifique da seguinte forma: abaixo de 0 → “Congelando”, entre 0 e 20 → “Frio”, entre 21 e 30 → “Agradável”, acima de 30 → “Quente”. 
-2. Peça ao usuário que digite uma senha (por exemplo, “dart123”) e repita a solicitação até que ele acerte. Ao final, exiba o número de tentativas até o acerto. 
-3. Faça um programa em Dart que solicite uma palavra ao usuário e informe: o número total de letras, quantas vogais ela possui  
+1. Crie um programa que peça uma temperatura em graus Celsius e classifique da seguinte forma: abaixo de 0 → “Congelando”, entre 0 e 20 → “Frio”, entre 21 e 30 → “Agradável”, acima de 30 → “Quente”.
+   ![código1](https://github.com/user-attachments/assets/59a63cd8-41a5-4adf-9aa1-06c01bec7369)
+
+2. Peça ao usuário que digite uma senha (por exemplo, “dart123”) e repita a solicitação até que ele acerte. Ao final, exiba o número de tentativas até o acerto.
+   ![código2](https://github.com/user-attachments/assets/0118e9c1-5597-4bc1-a330-847e8385d65a)
+
+3. Faça um programa em Dart que solicite uma palavra ao usuário e informe: o número total de letras, quantas vogais ela possui
+   ![código3](https://github.com/user-attachments/assets/743ff2b6-7469-4193-b412-c9366bb2efdd)
+ 
