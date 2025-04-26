@@ -32,11 +32,12 @@ A **tipagem forte impede conversões automáticas** entre tipos **incompatíveis
 
 1. Crie um programa que peça uma temperatura em graus Celsius e classifique da seguinte forma: abaixo de 0 → “Congelando”, entre 0 e 20 → “Frio”, entre 21 e 30 → “Agradável”, acima de 30 → “Quente”.
    ![código1](https://github.com/user-attachments/assets/59a63cd8-41a5-4adf-9aa1-06c01bec7369)
+   ![execução1](https://github.com/user-attachments/assets/894d84e5-5a65-4fff-bd7d-f1bf542b8d60)
 
-2. Peça ao usuário que digite uma senha (por exemplo, “dart123”) e repita a solicitação até que ele acerte. Ao final, exiba o número de tentativas até o acerto.
+3. Peça ao usuário que digite uma senha (por exemplo, “dart123”) e repita a solicitação até que ele acerte. Ao final, exiba o número de tentativas até o acerto.
    ![código2](https://github.com/user-attachments/assets/0118e9c1-5597-4bc1-a330-847e8385d65a)
+   ![execução2](https://github.com/user-attachments/assets/b3432368-85c4-43d5-a0e0-c5584a933677)
 
-3. Faça um programa em Dart que solicite uma palavra ao usuário e informe: o número total de letras, quantas vogais ela possui
+5. Faça um programa em Dart que solicite uma palavra ao usuário e informe: o número total de letras, quantas vogais ela possui
    ![código3](https://github.com/user-attachments/assets/8ed45d07-822c-48b7-8338-d4f36a216cd5)
-
- 
+   ![execução3](https://github.com/user-attachments/assets/dfdace59-3199-4e18-a87a-dc9416b16db8)
