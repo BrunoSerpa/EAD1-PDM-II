@@ -37,5 +37,6 @@ A **tipagem forte impede conversões automáticas** entre tipos **incompatíveis
    ![código2](https://github.com/user-attachments/assets/0118e9c1-5597-4bc1-a330-847e8385d65a)
 
 3. Faça um programa em Dart que solicite uma palavra ao usuário e informe: o número total de letras, quantas vogais ela possui
-   ![código3](https://github.com/user-attachments/assets/743ff2b6-7469-4193-b412-c9366bb2efdd)
+   ![código3](https://github.com/user-attachments/assets/8ed45d07-822c-48b7-8338-d4f36a216cd5)
+
  
