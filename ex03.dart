@@ -1,63 +1,67 @@
 import 'dart:io';
 
 class Palavra {
-  int vogais;
-  int letras;
+  final String texto;
+  late final int quantidadeVogais;
+  late final int quantidadeLetras;
 
-  Palavra({
-    required this.vogais,
-    required this.letras,
-  });
+  Palavra(this.texto) {
+    _contarCaracteres();
+  }
+
+  void _contarCaracteres() {
+    List<String> vogais = ["a", "e", "i", "o", "u"];
+    quantidadeVogais = 0;
+    quantidadeLetras = 0;
+
+    for (var letra in texto.split('')) {
+      if (vogais.contains(letra.toLowerCase())) {
+        quantidadeVogais++;
+      }
+      if (letra.contains(RegExp(r'[a-zA-Z]'))) {
+        quantidadeLetras++;
+      }
+    }
+  }
+
+  String resumo() {
+    String letrasTexto =
+        "$quantidadeLetras letra${quantidadeLetras == 1 ? '' : 's'}";
+    String vogaisTexto =
+        "$quantidadeVogais vogal${quantidadeVogais == 1 ? '' : 's'}";
+    return 'A palavra "$texto" possui $letrasTexto e $vogaisTexto!';
+  }
 }
 
-Palavra contarLetras() {
-  String? palavraDigitada = null;
-  while (palavraDigitada == null) {
-    stdout.write('Insira uma palavra: ');
-    palavraDigitada = stdin.readLineSync();
-    if (palavraDigitada == null || palavraDigitada.isEmpty) {
-      print("Nenhuma palavra foi digitada! Tente Novamente.");
-      continue;
+class AplicativoPalavra {
+  void iniciar() {
+    do {
+      Palavra palavra = _lerPalavra();
+      print(palavra.resumo());
+    } while (_desejaContinuar());
+    print("Até mais!");
+  }
+
+  Palavra _lerPalavra() {
+    for (;;) {
+      stdout.write('Insira uma palavra: ');
+      String? palavraDigitada = stdin.readLineSync();
+      if (palavraDigitada == null || palavraDigitada.trim().isEmpty) {
+        print("Nenhuma palavra foi digitada. Tente novamente.");
+        continue;
+      }
+      return Palavra(palavraDigitada.trim());
     }
   }
 
-  List<String> vogais = ["a", "e", "i", "o", "u"];
-  int quantVogais = 0;
-  int quantLetras = 0;
-
-  for (int i = 0; i < palavraDigitada.length; i++) {
-    String letra = palavraDigitada[i];
-
-    if (vogais.contains(letra.toLowerCase())) {
-      quantVogais++;
-    }
-
-    if (!letra.contains(RegExp(r'[0-1]'))) {
-      quantLetras++;
-    }
+  bool _desejaContinuar() {
+    stdout.write('Deseja rodar novamente? (s/n): ');
+    String? resposta = stdin.readLineSync();
+    return resposta?.toLowerCase() == 's';
   }
-
-  return Palavra(vogais: quantVogais, letras: quantLetras);
 }
 
 void main() {
-  while (true) {
-    Palavra palavra = contarLetras();
-    String letras = "${palavra.letras} letras";
-    if (palavra.letras == 1) {
-      letras = "${palavra.letras} letra";
-    }
-    String vogais = "${palavra.vogais} vogais";
-    if (palavra.vogais == 1) {
-      vogais = "${palavra.vogais} vogal";
-    }
-    print("Esta palavra possui $letras e $vogais!");
-    print('Insira 1 para rodar novamente.');
-    String? resp = stdin.readLineSync();
-    if (resp == "1") {
-      continue;
-    }
-    break;
-  }
-  print("Até mais!");
+  AplicativoPalavra app = AplicativoPalavra();
+  app.iniciar();
 }
